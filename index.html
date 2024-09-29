@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elégedettségi kérdőív</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #container {
+      background-color: #BFDBFE;
+      border: #4b4b4b41 solid 1px;
+      border-radius: 2px;
+      padding: 5px;
+    }
+    .question-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .question {
+      flex: 1 1 20%;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <form method="post" action="" name="contact-form">
+    <div class="bg-blue-600 p-4">
+      <img alt="Digisulim logo" class="h-10" height="50" src="https://digisulim.hu/kepek/logo_keskeny_femes_kicsi.png" width="100"/>
+    </div>
+
+    <div class="max-w-4xl mx-auto mt-8">
+      <div class="bg-white p-6 rounded-lg shadow-md" id="szel">
+        <div class="text-center mb-6">
+          <h1 class="text-3xl font-bold">Elégedettségi kérdőív</h1>
+          <h2 class="text-xl text-blue-600 mt-2">KIFÜ ügyfélbejelentés-kezelés</h2>
+        </div>
+
+        <div class="mb-6" id="container">
+          <h2 class="text-lg font-semibold mb-4">Mennyire volt elégedett az ügyintézéssel?</h2>
+          <div class="question-group">
+            <div class="question">
+              <div class="text-center p-4 bg-white rounded-lg border cursor-pointer" id="group1-option1" onclick="selectOption(1, 'group1')">
+                <img src="vh.png" alt="Nagyon" class="mx-auto mb-2 h-12">
+                <p class="text-lg">Nagyon!</p>
+              </div>
+            </div>
+            <div class="question">
+              <div class="text-center p-4 bg-white rounded-lg border cursor-pointer" id="group1-option2" onclick="selectOption(2, 'group1')">
+                <img src="https://static.vecteezy.com/system/resources/previews/022/917/027/non_2x/yellow-happy-smile-face-emoticon-png.png" alt="Igen" class="mx-auto mb-2 h-12">
+                <p class="text-lg">Inkább igen</p>
+              </div>
+            </div>
+            <div class="question">
+              <div class="text-center p-4 bg-white rounded-lg border cursor-pointer" id="group1-option3" onclick="selectOption(3, 'group1')">
+                <img src="https://static.vecteezy.com/system/resources/previews/013/743/777/non_2x/neutral-face-emoji-png.png" alt="Nem" class="mx-auto mb-2 h-12">
+                <p class="text-lg">Inkább nem</p>
+              </div>
+            </div>
+            <div class="question">
+              <div class="text-center p-4 bg-white rounded-lg border cursor-pointer" id="group1-option4" onclick="selectOption(4, 'group1')">
+                <img src="https://static-00.iconduck.com/assets.00/angry-face-emoji-2048x2048-tvcurhfn.png" alt="Egyáltalán nem" class="mx-auto mb-2 h-12">
+                <p class="text-lg">Egyáltalán nem</p>
+              </ div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-6" id="container">
+          <h2 class="text-lg font-semibold mb-4">Megfelelőnek találta a bejelentésére adott válaszunkat, megoldásunkat?</h2>
+          <div class="question-group">
+            <div class="question">
+              <div class="text-center p-4 bg-white rounded-lg border cursor-pointer" id="group2-option1" onclick="selectOption(1, 'group2')">
+                <img src="vh.png" alt="Nagyon" class="mx-auto mb-2 h-12">
+                <p class="text-lg">Nagyon!</p>
+              </div>
+            </div>
+            <div class="question">
+              <div class="text-center p-4 bg-white rounded-lg border cursor-pointer" id="group2-option2" onclick="selectOption(2, 'group2')">
+                <img src="https://static.vecteezy.com/system/resources/previews/022/917/027/non_2x/yellow-happy-smile-face-emoticon-png.png" alt="Igen" class="mx-auto mb-2 h-12">
+                <p class="text-lg">Inkább igen</p>
+              </div>
+            </div>
+            <div class="question">
+              <div class="text-center p-4 bg-white rounded-lg border cursor-pointer" id="group2-option3" onclick="selectOption(3, 'group2')">
+                <img src="https://static.vecteezy.com/system/resources/previews/013/743/777/non_2x/neutral-face-emoji-png.png" alt="Nem" class="mx-auto mb-2 h-12">
+                <p class="text-lg">Inkább nem</p>
+              </div>
+            </div>
+            <div class="question">
+              <div class="text-center p-4 bg-white rounded-lg border cursor-pointer" id="group2-option4" onclick="selectOption(4, 'group2')">
+                <img src="https://static-00.iconduck.com/assets.00/angry-face-emoji-2048x2048-tvcurhfn.png" alt="Egyáltalán nem" class="mx-auto mb-2 h-12">
+                <p class="text-lg">Egyáltalán nem</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-6" id="container">
+          <h2 class="text-lg font-semibold mb-4">Mennyire volt elégedett az ügyintézés gyorsaságával?</h2>
+          <div class="question-group">
+            <div class="question">
+              <div class="text-center p-4 bg-white rounded-lg border cursor-pointer" id="group3-option1" onclick="selectOption(1, 'group3')">
+                <img src="vh.png" alt="Nagyon" class="mx-auto mb-2 h-12">
+                <p class="text-lg">Nagyon!</p>
+              </div>
+            </div>
+            <div class="question">
+              <div class="text-center p-4 bg-white rounded-lg border cursor-pointer" id="group3-option2" onclick="selectOption(2, 'group3')">
+                <img src="https://static.vecteezy.com/system/resources/previews/022/917/027/non_2x/yellow-happy-smile-face-emoticon-png.png" alt="Igen" class="mx-auto mb-2 h-12">
+                <p class="text-lg">Inkább igen</p>
+              </div>
+            </div>
+            <div class="question">
+              <div class="text-center p-4 bg-white rounded-lg border cursor-pointer" id="group3-option3" onclick="selectOption(3, 'group3')">
+                <img src="https://static.vecteezy.com/system/resources/previews/013/743/777/non_2x/neutral-face-emoji-png.png" alt="Nem" class="mx-auto mb-2 h-12">
+                <p class="text-lg">Inkább nem</p>
+              </div>
+            </div>
+            <div class="question">
+              <div class="text-center p-4 bg-white rounded-lg border cursor-pointer" id="group3-option4" onclick="selectOption(4, 'group3')">
+                <img src="https://static-00.iconduck.com/assets.00/angry-face-emoji-2048x2048-tvcurhfn.png" alt="Egy általán nem" class="mx-auto mb-2 h-12">
+                <p class="text-lg">Egyáltalán nem</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-6" id="container">
+          <h2 class="text-lg font-semibold mb-4">Kérjük, itt hagyja meg véleményét vagy javaslatait:</h2>
+          <textarea name="dat4" class="w-full p-4 border rounded-lg" rows="4" placeholder="Véleményed vagy javaslatod..."></textarea>
+        </div>
+
+        <div class="text-right">
+          <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-lg">Elküldöm</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <div class="max-w-4xl mx-auto mt-8" id="chartContainer" style="display: none;">
+    <canvas id="resultsChart"></canvas>
+  </div>
+
+  <div class="max-w-4xl mx-auto mt-8" id="averageContainer">
+    <p id="averageDat1"></p>
+    <p id="averageDat2"></p>
+    <p id="averageDat3"></p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const datValues = { dat1: null, dat2: null, dat3: null, dat4: null };
+  
+    function selectOption(option, groupId) {
+      const options = [1, 2, 3, 4];
+      options.forEach((opt) => {
+        const element = document.getElementById(`${groupId}-option${opt}`);
+        element.classList.toggle('selected', opt === option);
+        if (groupId === 'group1' && opt === option) {
+          datValues.dat1 = opt;
+        } else if (groupId === 'group2' && opt === option) {
+          datValues.dat2 = opt;
+        } else if (groupId === 'group3' && opt === option) {
+          datValues.dat3 = opt;
+        }
+      });
+    }
+  
+    function sendDatValuesToGAS() {
+      const url = 'https://script.google.com/macros/s/AKfycbwrObciquTZXDnHGoX7TX5j6CJw94N5Uh5N4H_RLC9JODROqei9YPd1ZuBZJieOGten/exec';
+  
+      datValues.dat4 = document.querySelector('textarea[name="dat4"]').value;
+  
+      fetch(url, {
+        method: 'POST',
+        body: new URLSearchParams(datValues)
+      })
+        .then(response => response.json())
+        .then(result => {
+          if (result.result === 'success') {
+            console.log('Adatok sikeresen elküldve, sor:', result.row);
+            displayChart(); 
+            displayAverages();
+          } else {
+            console.error('Hiba történt:', result.error);
+          }
+        })
+        .catch(error => console.error('Hálózati hiba:', error));
+    }
+  
+    function calculateAverages() {
+      const totalResponses = 3; // total questions
+      const averageDat1 = datValues.dat1 ? datValues.dat1 : 0;
+      const averageDat2 = datValues.dat2 ? datValues.dat2 : 0;
+      const averageDat3 = datValues.dat3 ? datValues.dat3 : 0;
+  
+      return {
+        dat1: averageDat1,
+        dat2: averageDat2,
+        dat3: averageDat3,
+        average: (averageDat1 + averageDat2 + averageDat3) / totalResponses
+      };
+    }
+  
+    function displayChart() {
+      const averages = calculateAverages();
+      const ctx = document.getElementById('resultsChart').getContext('2d');
+  
+      const chartData = {
+        labels: ['1. válasz', '2. válasz', '3. válasz'],
+        datasets: [{
+          label: 'Elégedettségi adatok',
+          data: [
+            averages.dat1 || 0,
+            averages.dat2 || 0,
+            averages.dat3 || 0,
+          ],
+          backgroundColor: [
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)',
+            'rgba(255, 99, 132, 0 .2)'
+          ],
+          borderColor: [
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)',
+            'rgba(255, 99, 132, 1)'
+          ],
+          borderWidth: 1
+        }]
+      };
+  
+      const chartOptions = {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      };
+  
+      const resultsChart = new Chart(ctx, {
+        type: 'bar', 
+        data: chartData,
+        options: chartOptions
+      });
+  
+      document.getElementById('chartContainer').style.display = 'block';
+    }
+  
+    function displayAverages() {
+      fetch('https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec')
+        .then(response => response.json())
+        .then(averages => {
+          document.getElementById('averageDat1').innerHTML = `Átlag 1. válasz: ${averages.dat1}`;
+          document.getElementById('averageDat2').innerHTML = `Átlag 2. válasz: ${averages.dat2}`;
+          document.getElementById('averageDat3').innerHTML = `Átlag 3. válasz: ${averages.dat3}`;
+          document.getElementById('averageContainer').style.display = 'block';
+        })
+        .catch(error => console.error('Hiba:', error));
+    }
+  
+    document.querySelector('form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      sendDatValuesToGAS();
+    });
+  </script>  
+
+</body>
+</html>

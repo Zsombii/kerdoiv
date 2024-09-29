@@ -1,0 +1,10 @@
+.selected {
+    border: 2px solid #6d89d6;
+    background-color: rgb(42, 161, 230) !important;
+    color: white;
+}
+
+#szel{
+    width: 160%;
+    transform:translateX(-250px);
+}

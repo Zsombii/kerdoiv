@@ -9,10 +9,12 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css">
   <style>
+    body{
+      background-color: grey;
+    }
+
     #container {
-      background-color: #BFDBFE;
-      border: #4b4b4b41 solid 1px;
-      border-radius: 2px;
+      background-color: #414141;
       padding: 5px;
     }
     .question-group {
@@ -21,12 +23,13 @@
       justify-content: space-between;
     }
     .question {
+      background-color: rgb(184, 184, 184);
       flex: 1 1 20%;
       margin: 10px;
     }
   </style>
 </head>
-<body class="bg-gray-100">
+<body>
   <form method="post" action="" name="contact-form">
     <div class="bg-blue-600 p-4">
       <img alt="Digisulim logo" class="h-10" height="50" src="https://digisulim.hu/kepek/logo_keskeny_femes_kicsi.png" width="100"/>
@@ -36,35 +39,35 @@
       <div class="bg-white p-6 rounded-lg shadow-md" id="szel">
         <div class="text-center mb-6">
           <h1 class="text-3xl font-bold">Elégedettségi kérdőív</h1>
-          <h2 class="text-xl text-blue-600 mt-2">KIFÜ ügyfélbejelentés-kezelés</h2>
+          <h2 class="text-xl mt-2">KIFÜ ügyfélbejelentés-kezelés</h2>
         </div>
 
         <div class="mb-6" id="container">
           <h2 class="text-lg font-semibold mb-4">Mennyire volt elégedett az ügyintézéssel?</h2>
           <div class="question-group">
             <div class="question">
-              <div class="text-center p-4 bg-white rounded-lg border cursor-pointer" id="group1-option1" onclick="selectOption(1, 'group1')">
-                <img src="vh.png" alt="Nagyon" class="mx-auto mb-2 h-12">
+              <div class="text-center p-4 rounded-lg border cursor-pointer" id="group1-option1" onclick="selectOption(1, 'group1')">
+                <h1 class="emoji">😁</h1>
                 <p class="text-lg">Nagyon!</p>
               </div>
             </div>
             <div class="question">
-              <div class="text-center p-4 bg-white rounded-lg border cursor-pointer" id="group1-option2" onclick="selectOption(2, 'group1')">
-                <img src="https://static.vecteezy.com/system/resources/previews/022/917/027/non_2x/yellow-happy-smile-face-emoticon-png.png" alt="Igen" class="mx-auto mb-2 h-12">
+              <div class="text-center p-4 rounded-lg border cursor-pointer" id="group1-option2" onclick="selectOption(2, 'group1')">
+                <h1 class="emoji">😊</h1>
                 <p class="text-lg">Inkább igen</p>
               </div>
             </div>
             <div class="question">
-              <div class="text-center p-4 bg-white rounded-lg border cursor-pointer" id="group1-option3" onclick="selectOption(3, 'group1')">
-                <img src="https://static.vecteezy.com/system/resources/previews/013/743/777/non_2x/neutral-face-emoji-png.png" alt="Nem" class="mx-auto mb-2 h-12">
+              <div class="text-center p-4 rounded-lg border cursor-pointer" id="group1-option3" onclick="selectOption(3, 'group1')">
+                <h1 class="emoji">😐</h1>
                 <p class="text-lg">Inkább nem</p>
               </div>
             </div>
             <div class="question">
-              <div class="text-center p-4 bg-white rounded-lg border cursor-pointer" id="group1-option4" onclick="selectOption(4, 'group1')">
-                <img src="https://static-00.iconduck.com/assets.00/angry-face-emoji-2048x2048-tvcurhfn.png" alt="Egyáltalán nem" class="mx-auto mb-2 h-12">
+              <div class="text-center p-4 rounded-lg border cursor-pointer" id="group1-option4" onclick="selectOption(4, 'group1')">
+                <h1 class="emoji">😠</h1>
                 <p class="text-lg">Egyáltalán nem</p>
-              </ div>
+              </div>
             </div>
           </div>
         </div>
@@ -73,26 +76,26 @@
           <h2 class="text-lg font-semibold mb-4">Megfelelőnek találta a bejelentésére adott válaszunkat, megoldásunkat?</h2>
           <div class="question-group">
             <div class="question">
-              <div class="text-center p-4 bg-white rounded-lg border cursor-pointer" id="group2-option1" onclick="selectOption(1, 'group2')">
-                <img src="vh.png" alt="Nagyon" class="mx-auto mb-2 h-12">
+              <div class="text-center p-4 rounded-lg border cursor-pointer" id="group2-option1" onclick="selectOption(1, 'group2')">
+                <h1 class="emoji">😁</h1>
                 <p class="text-lg">Nagyon!</p>
               </div>
             </div>
             <div class="question">
-              <div class="text-center p-4 bg-white rounded-lg border cursor-pointer" id="group2-option2" onclick="selectOption(2, 'group2')">
-                <img src="https://static.vecteezy.com/system/resources/previews/022/917/027/non_2x/yellow-happy-smile-face-emoticon-png.png" alt="Igen" class="mx-auto mb-2 h-12">
+              <div class="text-center p-4 rounded-lg border cursor-pointer" id="group2-option2" onclick="selectOption(2, 'group2')">
+                <h1 class="emoji">😊</h1>
                 <p class="text-lg">Inkább igen</p>
               </div>
             </div>
             <div class="question">
-              <div class="text-center p-4 bg-white rounded-lg border cursor-pointer" id="group2-option3" onclick="selectOption(3, 'group2')">
-                <img src="https://static.vecteezy.com/system/resources/previews/013/743/777/non_2x/neutral-face-emoji-png.png" alt="Nem" class="mx-auto mb-2 h-12">
+              <div class="text-center p-4 rounded-lg border cursor-pointer" id="group2-option3" onclick="selectOption(3, 'group2')">
+                <h1 class="emoji">😐</h1>
                 <p class="text-lg">Inkább nem</p>
               </div>
             </div>
             <div class="question">
-              <div class="text-center p-4 bg-white rounded-lg border cursor-pointer" id="group2-option4" onclick="selectOption(4, 'group2')">
-                <img src="https://static-00.iconduck.com/assets.00/angry-face-emoji-2048x2048-tvcurhfn.png" alt="Egyáltalán nem" class="mx-auto mb-2 h-12">
+              <div class="text-center p-4 rounded-lg border cursor-pointer" id="group2-option4" onclick="selectOption(4, 'group2')">
+                <h1 class="emoji">😠</h1>
                 <p class="text-lg">Egyáltalán nem</p>
               </div>
             </div>
@@ -103,26 +106,26 @@
           <h2 class="text-lg font-semibold mb-4">Mennyire volt elégedett az ügyintézés gyorsaságával?</h2>
           <div class="question-group">
             <div class="question">
-              <div class="text-center p-4 bg-white rounded-lg border cursor-pointer" id="group3-option1" onclick="selectOption(1, 'group3')">
-                <img src="vh.png" alt="Nagyon" class="mx-auto mb-2 h-12">
+              <div class="text-center p-4 rounded-lg border cursor-pointer" id="group3-option1" onclick="selectOption(1, 'group3')">
+                <h1 class="emoji">😁</h1>
                 <p class="text-lg">Nagyon!</p>
               </div>
             </div>
             <div class="question">
-              <div class="text-center p-4 bg-white rounded-lg border cursor-pointer" id="group3-option2" onclick="selectOption(2, 'group3')">
-                <img src="https://static.vecteezy.com/system/resources/previews/022/917/027/non_2x/yellow-happy-smile-face-emoticon-png.png" alt="Igen" class="mx-auto mb-2 h-12">
+              <div class="text-center p-4 rounded-lg border cursor-pointer" id="group3-option2" onclick="selectOption(2, 'group3')">
+                <h1 class="emoji">😊</h1>
                 <p class="text-lg">Inkább igen</p>
               </div>
             </div>
             <div class="question">
-              <div class="text-center p-4 bg-white rounded-lg border cursor-pointer" id="group3-option3" onclick="selectOption(3, 'group3')">
-                <img src="https://static.vecteezy.com/system/resources/previews/013/743/777/non_2x/neutral-face-emoji-png.png" alt="Nem" class="mx-auto mb-2 h-12">
+              <div class="text-center p-4 rounded-lg border cursor-pointer" id="group3-option3" onclick="selectOption(3, 'group3')">
+                <h1 class="emoji">😐</h1>
                 <p class="text-lg">Inkább nem</p>
               </div>
             </div>
             <div class="question">
-              <div class="text-center p-4 bg-white rounded-lg border cursor-pointer" id="group3-option4" onclick="selectOption(4, 'group3')">
-                <img src="https://static-00.iconduck.com/assets.00/angry-face-emoji-2048x2048-tvcurhfn.png" alt="Egy általán nem" class="mx-auto mb-2 h-12">
+              <div class="text-center p-4 rounded-lg border cursor-pointer" id="group3-option4" onclick="selectOption(4, 'group3')">
+                <h1 class="emoji">😠</h1>
                 <p class="text-lg">Egyáltalán nem</p>
               </div>
             </div>
@@ -135,7 +138,7 @@
         </div>
 
         <div class="text-right">
-          <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-lg">Elküldöm</button>
+          <button type="submit" class="bg-white text-black px-6 py-2 rounded-lg">Elküldöm</button>
         </div>
       </div>
     </div>

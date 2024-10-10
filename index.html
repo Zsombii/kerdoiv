@@ -141,9 +141,21 @@
     </div>
   </form>
 
-  <div class="max-w-4xl mx-auto mt-8" id="chartContainer" style="display: none;">
-    <canvas id="resultsChart"></canvas>
+  <div class="max-w-4xl mx-auto mt-8 flex justify-between">
+    <div class="w-1/3 p-2">
+      <iframe width="303" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSyOEWKSN83bsWfQAc_TzUbIfcUXQkJMA6fiq_TX8pcYICR-6bnypFLmxk08l4aiz0MomtOEXRJCRaE/pubchart?oid=1307571351&amp;format=interactive"></iframe>
+    </div>
+  
+    <div class="w-1/3 p-2">
+      <iframe width="303" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSyOEWKSN83bsWfQAc_TzUbIfcUXQkJMA6fiq_TX8pcYICR-6bnypFLmxk08l4aiz0MomtOEXRJCRaE/pubchart?oid=1716255273&amp;format=interactive"></iframe>
+    </div>
+  
+    <div class="w-1/3 p-2">
+      <iframe width="303" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSyOEWKSN83bsWfQAc_TzUbIfcUXQkJMA6fiq_TX8pcYICR-6bnypFLmxk08l4aiz0MomtOEXRJCRaE/pubchart?oid=606506109&amp;format=interactive"></iframe>
+    </div>
   </div>
+  
+  
 
   <div class="max-w-4xl mx-auto mt-8" id="averageContainer">
     <p id="averageDat1"></p>
@@ -192,77 +204,7 @@
         .catch(error => console.error('Hálózati hiba:', error));
     }
   
-    function calculateAverages() {
-      const totalResponses = 3; // total questions
-      const averageDat1 = datValues.dat1 ? datValues.dat1 : 0;
-      const averageDat2 = datValues.dat2 ? datValues.dat2 : 0;
-      const averageDat3 = datValues.dat3 ? datValues.dat3 : 0;
-  
-      return {
-        dat1: averageDat1,
-        dat2: averageDat2,
-        dat3: averageDat3,
-        average: (averageDat1 + averageDat2 + averageDat3) / totalResponses
-      };
-    }
-  
-    function displayChart() {
-      const averages = calculateAverages();
-      const ctx = document.getElementById('resultsChart').getContext('2d');
-  
-      const chartData = {
-        labels: ['1. válasz', '2. válasz', '3. válasz'],
-        datasets: [{
-          label: 'Elégedettségi adatok',
-          data: [
-            averages.dat1 || 0,
-            averages.dat2 || 0,
-            averages.dat3 || 0,
-          ],
-          backgroundColor: [
-            'rgba(75, 192, 192, 0.2)',
-            'rgba(153, 102, 255, 0.2)',
-            'rgba(255, 159, 64, 0.2)',
-            'rgba(255, 99, 132, 0 .2)'
-          ],
-          borderColor: [
-            'rgba(75, 192, 192, 1)',
-            'rgba(153, 102, 255, 1)',
-            'rgba(255, 159, 64, 1)',
-            'rgba(255, 99, 132, 1)'
-          ],
-          borderWidth: 1
-        }]
-      };
-  
-      const chartOptions = {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
-      };
-  
-      const resultsChart = new Chart(ctx, {
-        type: 'bar', 
-        data: chartData,
-        options: chartOptions
-      });
-  
-      document.getElementById('chartContainer').style.display = 'block';
-    }
-  
-    function displayAverages() {
-      fetch('https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec')
-        .then(response => response.json())
-        .then(averages => {
-          document.getElementById('averageDat1').innerHTML = `Átlag 1. válasz: ${averages.dat1}`;
-          document.getElementById('averageDat2').innerHTML = `Átlag 2. válasz: ${averages.dat2}`;
-          document.getElementById('averageDat3').innerHTML = `Átlag 3. válasz: ${averages.dat3}`;
-          document.getElementById('averageContainer').style.display = 'block';
-        })
-        .catch(error => console.error('Hiba:', error));
-    }
+    
   
     document.querySelector('form').addEventListener('submit', function(event) {
       event.preventDefault();
